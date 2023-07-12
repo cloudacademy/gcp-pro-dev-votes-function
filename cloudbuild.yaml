@@ -1,0 +1,10 @@
+steps:
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: bash
+  args: 
+    - -cx
+    - |
+        gcloud functions deploy votes \
+          --runtime python311 \
+          --entry-point votes \
+          --set-env-vars instance=$(_VOTES_INSTANCE),database=$(_VOTES_DATABASE)
