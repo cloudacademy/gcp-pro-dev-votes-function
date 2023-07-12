@@ -7,4 +7,4 @@ steps:
         gcloud functions deploy votes \
           --runtime python311 \
           --entry-point votes \
-          --set-env-vars instance=$(_VOTES_INSTANCE),database=$(_VOTES_DATABASE)
+          --set-env-vars instance=vote-instance,database=votes
