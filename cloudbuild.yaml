@@ -5,6 +5,7 @@ steps:
     - -cx
     - |
         gcloud functions deploy votes \
+          --region ${_REGION} \
           --runtime python311 \
           --entry-point votes \
           --trigger-http \
