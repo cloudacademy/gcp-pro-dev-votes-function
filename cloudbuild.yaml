@@ -7,4 +7,9 @@ steps:
         gcloud functions deploy votes \
           --runtime python311 \
           --entry-point votes \
+          --trigger-http \
+          --gen2 \
+          --memory=256MB \
+          --timeout=10s \
+          --max-instances=1 \
           --set-env-vars instance=vote-instance,database=votes
