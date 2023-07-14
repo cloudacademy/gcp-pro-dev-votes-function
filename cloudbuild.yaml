@@ -13,4 +13,5 @@ steps:
           --memory=256MB \
           --timeout=10s \
           --max-instances=1 \
+          --no-allow-unauthenticated \
           --set-env-vars instance=vote-instance,database=votes
