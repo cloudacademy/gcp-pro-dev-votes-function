@@ -18,7 +18,7 @@ database = instance.database(database_name)
 def get_votes_count_from_spanner() -> str:
     with database.snapshot() as snapshot:
         results = snapshot.execute_sql(
-            "SELECT COUNT(*) FROM votes"
+            "SELECT COUNT(*) FROM votes LIMIT 0"
         )
         for row in results:
             response = {"votes": str(row[0])}
