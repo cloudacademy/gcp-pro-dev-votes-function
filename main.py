@@ -1,5 +1,3 @@
-# google cloud function to write to cloud spanner
-
 import json
 import os
 import uuid
